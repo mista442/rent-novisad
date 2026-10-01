@@ -1,0 +1,20 @@
+[project]
+name = "rent-novisad"
+version = "0.1.0"
+description = "Поиск аренды в Нови-Саде: сбор объявлений, фильтры, готовые сообщения и перевод на русский"
+requires-python = ">=3.10"
+dependencies = ["requests>=2.31", "beautifulsoup4>=4.12", "PyYAML>=6.0", "anthropic>=0.40"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

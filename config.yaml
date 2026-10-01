@@ -1,0 +1,44 @@
+# ======= КРИТЕРИИ ПОИСКА — правьте под себя (значения ниже — примеры-заглушки) =======
+applicant:
+  name: "ВАШЕ ИМЯ"            # как представляться арендодателю (латиницей)
+  is_pensioner: true          # упоминать, что вы пенсионер (подтвердите, что это про вас)
+  about_sr: "Ja sam penzioner, miran i uredan stanar, bez kućnih ljubimaca."
+  about_en: "I am a retiree, a quiet and tidy tenant, with no pets."
+  about_ru: "Я пенсионер, спокойный и аккуратный жилец, без домашних животных."
+  move_in_from: "2026-10-06"  # с какой даты нужен заезд
+  lease_months: 12            # желаемый срок аренды
+
+search:
+  city: "Novi Sad"
+  max_price_eur: 450          # максимум в месяц; динары пересчитываются по курсу ниже
+  min_price_eur: 0
+  eur_to_rsd: 117
+  min_rooms: 1.0              # 1.0 = garsonjera/studio, 1.5 = jednoiposoban, 2.0 = dvosoban
+  max_rooms: 2.0
+  min_area_m2: 30
+  districts_prefer: ["Centar", "Stari grad", "Grbavica", "Liman", "Podbara", "Detelinara"]
+  districts_avoid: ["Futog", "Veternik", "Petrovaradin", "Kać", "Begeč"]
+  # Желательно/обязательно. required -> без упоминания объявление НЕ отсеивается, но получает
+  # пометку «уточнить» (в объявлениях часто не пишут всё). deal_breakers -> отсев.
+  required_amenities: ["internet", "stove", "fridge"]
+  nice_to_have: ["washing_machine", "air_conditioning", "balcony", "elevator", "central_heating"]
+  deal_breakers: ["agency_fee", "no_registration", "students_only", "short_term_only"]
+  max_age_days: 14            # старше — игнорировать
+
+sources:
+  telegram_channels: ["novisad_stan", "NoviSadKvartiri"]
+  blacklist_chat: "I_Black_list_Chat"
+  # Парсеры сайтов пока выключены: нужен реальный HTML (см. README, раздел «Сайты»)
+  sites:
+    halooglasi: false
+    fourzida: false
+    nekretnine: false
+    cityexpert: false
+  manual_file: "data/manual_listings.yaml"   # сюда вставляйте объявления из Facebook и др.
+
+translate:
+  enabled: true
+  model: "claude-haiku-4-5-20251001"
+
+cover_letter:
+  default_variant: "friendly"   # formal | friendly | short | detailed
