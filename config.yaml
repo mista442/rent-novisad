@@ -1,6 +1,6 @@
 # ======= КРИТЕРИИ ПОИСКА — правьте под себя (значения ниже — примеры-заглушки) =======
 applicant:
-  name: "ВАШЕ ИМЯ"            # как представляться арендодателю (латиницей)
+  name: "Mikhail"            # как представляться арендодателю (латиницей)
   is_pensioner: true          # упоминать, что вы пенсионер (подтвердите, что это про вас)
   about_sr: "Ja sam penzioner, miran i uredan stanar, bez kućnih ljubimaca."
   about_en: "I am a retiree, a quiet and tidy tenant, with no pets."
